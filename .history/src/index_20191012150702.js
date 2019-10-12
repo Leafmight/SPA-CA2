@@ -56,27 +56,27 @@ function eventHandler(e) {
 
     if (e.target == document.getElementById("b1")){
         console.log("Adding Person");
-        var fName = document.getElementById("fname").value;
-        var lName = document.getElementById("lname").value;
-        var email = document.getElementById("email").value;
-        var street = document.getElementById("street").value;
-        var additionalInfo = document.getElementById("adinfo").value;
-        var zipcode = document.getElementById("zip").value;
-        var city = document.getElementById("city").value;
-        var number = document.getElementById("number").value;
-        var phDesc = document.getElementById("phdesc").value;
-        var hName = document.getElementById("hname").value;
-        var hDesc = document.getElementById("hdesc").value;
+        var fName = document.getElementsById("fname").value;
+        var lName = document.getElementsById("lname").value;
+        var email = document.getElementsById("email").value;
+        var street = document.getElementsById("street").value;
+        var additionalInfo = document.getElementsById("adinfo").value;
+        var zipcode = document.getElementsById("zip").value;
+        var city = document.getElementsById("city").value;
+        var number = document.getElementsById("number").value;
+        var phDesc = document.getElementsById("phdesc").value;
+        var hName = document.getElementsById("hname").value;
+        var hDesc = document.getElementsById("hdesc").value;
 
         function CityInfo(){
             this.city = city;
-            this.zipCode = zipcode;
+            this.zipcode = zipcode;
         }
 
         function Address(){
             this.street = street;
             this.additionalInfo = additionalInfo;
-            this.cityInfo = new CityInfo();
+            this.cityinfo = new CityInfo();
         }
         
         function Phone(){
@@ -90,19 +90,19 @@ function eventHandler(e) {
         }
 
         function Person() {
-            this.fName = fName;
-            this.lName = lName;
+            this.fname = fName;
+            this.lname = lName;
             this.email = email;
             this.address = new Address();
-            this.phones = new Phone();
-            this.hobbies = new Hobby();
+            this.phone = new Phone();
+            this.hobby = new Hobby();
         }
 
         const data = new Person();
-        console.log(JSON.stringify(data));
-        
+        console.log(data);
+        /*
         const options = makeOptions("POST", data);
-/*
+
         function makeOptions(method, body) {
             var opts = {
                 method: method,

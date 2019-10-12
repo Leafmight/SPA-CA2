@@ -53,56 +53,35 @@ var buttonEvent1 = document.getElementById("outer");
 buttonEvent1.addEventListener("click", eventHandler, false);
 
 function eventHandler(e) {
-
-    if (e.target == document.getElementById("b1")){
-        console.log("Adding Person");
-        var fName = document.getElementById("fname").value;
-        var lName = document.getElementById("lname").value;
-        var email = document.getElementById("email").value;
-        var street = document.getElementById("street").value;
-        var additionalInfo = document.getElementById("adinfo").value;
-        var zipcode = document.getElementById("zip").value;
-        var city = document.getElementById("city").value;
-        var number = document.getElementById("number").value;
-        var phDesc = document.getElementById("phdesc").value;
-        var hName = document.getElementById("hname").value;
-        var hDesc = document.getElementById("hdesc").value;
-
-        function CityInfo(){
-            this.city = city;
-            this.zipCode = zipcode;
-        }
-
-        function Address(){
-            this.street = street;
-            this.additionalInfo = additionalInfo;
-            this.cityInfo = new CityInfo();
-        }
+    if (e.target == document.getElementsByTagName("send")){
+        var fName = document.getElementsByTagName("fname").value;
+        var lName = document.getElementsByTagName("lname").value;
+        var email = document.getElementsByTagName("email").value;
+        var street = document.getElementsByTagName("street").value;
+        var additionalInfo = document.getElementsByTagName("adinfo").value;
+        var zipcode = document.getElementsByTagName("zip").value;
+        var city = document.getElementsByTagName("city").value;
+        var number = document.getElementsByTagName("number").value;
+        var phDesc = document.getElementsByTagName("phdesc").value;
+        var hName = document.getElementsByTagName("hname").value;
+        var hDesc = document.getElementsByTagName("hdesc").value;
         
-        function Phone(){
-            this.number = number;
-            this.description = phDesc;
+
+        var pName = document.getElementById("name").value;
+        var pAge = document.getElementById("age").value;
+        var pGender = document.getElementById("gender").value;
+        var pEmail = document.getElementById("email").value;
+
+        function User() {
+            this.name = pName;
+            this.age = pAge;
+            this.gender = pGender;
+            this.email = pEmail;
         }
 
-        function Hobby(){
-            this.name = hName;
-            this.description = hDesc;
-        }
-
-        function Person() {
-            this.fName = fName;
-            this.lName = lName;
-            this.email = email;
-            this.address = new Address();
-            this.phones = new Phone();
-            this.hobbies = new Hobby();
-        }
-
-        const data = new Person();
-        console.log(JSON.stringify(data));
-        
+        const data = new User();
         const options = makeOptions("POST", data);
-/*
+
         function makeOptions(method, body) {
             var opts = {
                 method: method,
@@ -115,8 +94,6 @@ function eventHandler(e) {
             }
             return opts;
         }
-        fetch("http://localhost:8080/CA-2/api/general/add", options);
-        */
+        fetch("http://localhost:3333/api/users/", options);
     }
-    console.log(e.target);
 }

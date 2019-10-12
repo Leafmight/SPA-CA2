@@ -70,13 +70,13 @@ function eventHandler(e) {
 
         function CityInfo(){
             this.city = city;
-            this.zipCode = zipcode;
+            this.zipcode = zipcode;
         }
 
         function Address(){
             this.street = street;
             this.additionalInfo = additionalInfo;
-            this.cityInfo = new CityInfo();
+            this.cityinfo = new CityInfo();
         }
         
         function Phone(){
@@ -90,12 +90,12 @@ function eventHandler(e) {
         }
 
         function Person() {
-            this.fName = fName;
-            this.lName = lName;
+            this.fname = fName;
+            this.lname = lName;
             this.email = email;
             this.address = new Address();
-            this.phones = new Phone();
-            this.hobbies = new Hobby();
+            this.phone = new Phone();
+            this.hobby = new Hobby();
         }
 
         const data = new Person();
