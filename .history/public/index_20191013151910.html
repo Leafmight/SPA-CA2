@@ -9,8 +9,9 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>CA2 - Gruppe 6 - Sprints at the bottom of the page</h1>
+        <h1>Course Assignment 2</h1>
         <h2>Get information about a person (address, hobbies etc) given a phone number</h2>
+        <h2>Get a Person given a Phone</h2>
         <table class="table table-striped">
             <tr>
               <th>Id</th>
@@ -56,7 +57,7 @@
           <button id="PersonCountByHobbyButton" onClick=getPersonCountByHobby()>Count</button>
           <p id="count">Count: </p>
 
-          <h2>Get all Zipcodes</h2>
+
           <table class="table table-striped">
             <tr>
               <th>ZipCode</th>
@@ -70,9 +71,42 @@
 
 
 
-        
+
+          <h2>Address</h2>
+        <table>
+            <tr>
+                <th>additional Info</th>
+                <th>Street</th>
+            </tr>
+            <tbody id="address">
+
+            </tbody>
+        </table>
+        <h2>CityInfo</h2>
+        <table>
+            <tr>
+              <th>Id</th>
+              <th>City</th>
+              <th>Zipcode</th>    
+            </tr>
+            <tbody id="cityinfo">
+                
+            </tbody>
+          </table>
+          
+          <table>
+            <tr>
+              <th>Count</th>
+
+            </tr>
+            <tbody id="co">
+                <tr>
+
+                </tr>
+            </tbody>
+          </table>
         <hr>
-        <h2>Create a person with phone, hobby, address & cityinfo (DOESNT WORK)</h2>
+
         <div id="outer">
             <label for="Person">Person</label><br>
             <input type="text" id="fname" placeholder="firstName">

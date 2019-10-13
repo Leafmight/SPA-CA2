@@ -9,9 +9,10 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>CA2 - Gruppe 6 - Sprints at the bottom of the page</h1>
+        <h1>Course Assignment 2</h1>
         <h2>Get information about a person (address, hobbies etc) given a phone number</h2>
-        <table class="table table-striped">
+        <h2>Person</h2>
+        <table>
             <tr>
               <th>Id</th>
               <th>First Name</th>
@@ -20,7 +21,6 @@
               <th>Street</th> 
               <th>AdditionalInfo</th>   
               <th>City</th>   
-              <th>Zipcode</th>   
               <th>Number</th>   
               <th>Phone Description</th>   
               <th>Hobby</th>   
@@ -30,49 +30,46 @@
                 
             </tbody>
           </table>
-          <input type="text" id="PersonByPhone">
-          <button id="PersonByPhoneButton" onClick=getPersonByPhone()>Phone</button>
+          
+          <input type="text" id="PersonBy">
+          <button id="PersonByPhoneButton" onClick=getPersonBy()>Phone</button>
+          <button id="PersonByCityButton" onClick=getPersonBy()>City</button>
+          
+          <h2>Address</h2>
+        <table>
+            <tr>
+                <th>additional Info</th>
+                <th>Street</th>
+            </tr>
+            <tbody id="address">
 
-          <h2>Get a list of Persons given a City:</h2>
-          <table class="table table-striped">
+            </tbody>
+        </table>
+        <h2>CityInfo</h2>
+        <table>
             <tr>
               <th>Id</th>
-              <th>First Name</th>
-              <th>Last Name</th>    
-              <th>Email</th>    
-               
+              <th>City</th>
+              <th>Zipcode</th>    
             </tr>
-            <tbody id="person1">
+            <tbody id="cityinfo">
                 
             </tbody>
           </table>
-        
-          <input type="text" id="PersonByCity">
-          <button id="PersonByCityButton" onClick=getPersonByCity()>City</button>
-          
-
           <h2>Get the count of people with a given hobby</h2>
-          <input type="text" id="PersonCountByHobby">
-          <button id="PersonCountByHobbyButton" onClick=getPersonCountByHobby()>Count</button>
-          <p id="count">Count: </p>
-
-          <h2>Get all Zipcodes</h2>
-          <table class="table table-striped">
+          <table>
             <tr>
-              <th>ZipCode</th>
-                
+              <th>Count</th>
+
             </tr>
-            <tbody id="AllZipCodes">
-                
+            <tbody id="co">
+                <tr>
+
+                </tr>
             </tbody>
           </table>
-          <button id="AllZipCodesButton" onClick=>Get All Zips</button>
-
-
-
-        
         <hr>
-        <h2>Create a person with phone, hobby, address & cityinfo (DOESNT WORK)</h2>
+
         <div id="outer">
             <label for="Person">Person</label><br>
             <input type="text" id="fname" placeholder="firstName">
