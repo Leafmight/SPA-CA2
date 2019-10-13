@@ -14,22 +14,17 @@ function getPersonByPhone() {
         .then(data => {
             console.log(data);
             var rows = data.map(function (person) {
-                
+                person.forEach(address => {
+                    var street = address.address.street;
+                });
                 return "<tr>" +
                     "<td>" + person.id + "</td>" +
                     "<td>" + person.fName + "</td>" +
                     "<td>" + person.lName + "</td>" +
                     "<td>" + person.email + "</td>" +
-                    "<td>" + person.address.street + "</td>" +
-                    "<td>" + person.address.additionalInfo + "</td>" +
-                    "<td>" + person.address.cityInfo.city + "</td>" +
-                    "<td>" + person.address.cityInfo.zipCode + "</td>" + 
-                    "<td>" + person.phones[0].number + "</td>" + 
-                    "<td>" + person.phones[0].description + "</td>" + 
-                    "<td>" + person.hobbies[0].name + "</td>" + 
-                    "<td>" + person.hobbies[0].description + "</td>" + 
-                    
-   
+                    "<td>" + 
+                    street
+                    + "</td>"+   
                     "</tr>";
 
             }).join("");

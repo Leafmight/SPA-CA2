@@ -1,10 +1,9 @@
 //dette henter alle person
 var local = "http://localhost:8080/CA-2/api/";
 var droplet = "http://vincentcph.dk/CA-2/api/";
-
 function getaddress(something){
     something.map(function (address) {
-    return address.street;
+    return address;
 }).join("")};
 
 function getPersonByPhone() {
@@ -20,16 +19,7 @@ function getPersonByPhone() {
                     "<td>" + person.fName + "</td>" +
                     "<td>" + person.lName + "</td>" +
                     "<td>" + person.email + "</td>" +
-                    "<td>" + person.address.street + "</td>" +
-                    "<td>" + person.address.additionalInfo + "</td>" +
-                    "<td>" + person.address.cityInfo.city + "</td>" +
-                    "<td>" + person.address.cityInfo.zipCode + "</td>" + 
-                    "<td>" + person.phones[0].number + "</td>" + 
-                    "<td>" + person.phones[0].description + "</td>" + 
-                    "<td>" + person.hobbies[0].name + "</td>" + 
-                    "<td>" + person.hobbies[0].description + "</td>" + 
-                    
-   
+                  //  "<td>" + getaddress(person).street.value + "</td>"+   
                     "</tr>";
 
             }).join("");

@@ -26,8 +26,6 @@ function getPersonByPhone() {
                     "<td>" + person.address.cityInfo.zipCode + "</td>" + 
                     "<td>" + person.phones[0].number + "</td>" + 
                     "<td>" + person.phones[0].description + "</td>" + 
-                    "<td>" + person.hobbies[0].name + "</td>" + 
-                    "<td>" + person.hobbies[0].description + "</td>" + 
                     
    
                     "</tr>";
