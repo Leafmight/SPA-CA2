@@ -10,6 +10,26 @@
     </head>
     <body>
         <h1>Course Assignment 2</h1>
+        <h2>Get information about a person (address, hobbies etc) given a phone number</h2>
+        <h2>Person</h2>
+        <table>
+            <tr>
+              <th>Id</th>
+              <th>Email</th>
+              <th>First Name</th>
+              <th>Last Name</th>    
+              <th>email</th>    
+              <th>street</th>    
+            </tr>
+            <tbody id="person">
+                
+            </tbody>
+          </table>
+          
+          <input type="text" id="name">
+          <button id="b1" onClick=getPersonByPhone()>search</button>
+          
+          <h2>Address</h2>
         <table>
             <tr>
                 <th>additional Info</th>
@@ -19,6 +39,29 @@
 
             </tbody>
         </table>
+        <h2>CityInfo</h2>
+        <table>
+            <tr>
+              <th>Id</th>
+              <th>City</th>
+              <th>Zipcode</th>    
+            </tr>
+            <tbody id="cityinfo">
+                
+            </tbody>
+          </table>
+          <h2>Get the count of people with a given hobby</h2>
+          <table>
+            <tr>
+              <th>Count</th>
+
+            </tr>
+            <tbody id="co">
+                <tr>
+
+                </tr>
+            </tbody>
+          </table>
         <hr>
 
         <div id="outer">
@@ -34,12 +77,12 @@
             <input type="text" id="city" placeholder="City">
             <br><label for="Phone">Phone</label>
             <br><input type="text" id="number" placeholder="#">
-            <input type="text" id="phdesc" placeholder="Desc"> <span class="fa fa-plus addp"></span>
+            <input type="text" id="phdesc" placeholder="Desc">
             <div class="phone">
             </div>
             <br><label for="Hobby">Hobby</label>
             <br><input type="text" id="hname" placeholder="Name">
-            <input type="text" id="hdesc" placeholder="Desc"> <span class="fa fa-plus addh"></span>
+            <input type="text" id="hdesc" placeholder="Desc">
             <div class="hobby">
             </div>
             <button class="btn" id="b1">Add Person</button>
